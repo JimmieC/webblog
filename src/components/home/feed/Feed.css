@@ -1,0 +1,22 @@
+.feed {
+    margin: 20px;
+}
+
+.sport {
+    background-color: #ccf2ff !important;
+    color: black !important;
+}
+
+.leisure {
+    background-color: #ffcccc !important;
+    color: black !important;
+}
+
+.general {
+    background-color: #d9ffcc !important;
+    color: black !important;
+}
+
+.feedPostHeaderLabel {
+    float: right !important;
+}
