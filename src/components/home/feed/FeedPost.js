@@ -34,7 +34,7 @@ class FeedPost extends Component {
                 <Modal.Content image>
                     <Image wrapped size='medium' src={exampleImage} />
                     <Modal.Description>
-                        <p>{this.props.content.body}</p>
+                        {this.props.content.body}
                     </Modal.Description>
                 </Modal.Content>
                 <Modal.Actions>
