@@ -1,32 +1,40 @@
 import React, { Component } from 'react';
 import './App.css';
-import Feed from './components/home/feed/Feed.js'
 
-import { Container, Menu, Grid, Card, Icon, Image, Label, Modal, Button, Header } from 'semantic-ui-react'
+import { Header, Icon, Image } from 'semantic-ui-react';
+
+import Feed from './components/home/feed/Feed'
+import MenuBar from './components/menu/MenuBar'
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state = { activeItem: 'home' }
-        this.handleItemClick = this.handleItemClick.bind(this);
     }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-      const { activeItem } = this.state
     return (
-      <div className="App">
-          <Container>
-              <Menu pointing>
-                  <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-                  <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-              </Menu>
-          </Container>
-          <Feed />
+        <div className="App">
 
-          </div>
-          );
+            <div className='header'>
+                <Header as='h1' icon textAlign='center'>
+                    <Header.Content>
+                        Wonderful Japan
+                        <Header.Subheader>
+                            A collection of Japanese information and stories
+                        </Header.Subheader>
+                    </Header.Content>
+                </Header>
+
+            </div>
+
+            <MenuBar />
+
+            <Feed />
+
+        </div>
+    );
   }
 }
 

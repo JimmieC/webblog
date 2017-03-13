@@ -7,7 +7,7 @@ export default function reducer(state = posts
             state = {...state, activePost: { open: true, content: action.payload.post }}
             break;
         case 'CLOSE_POST':
-            state = {...state, activePost: { open: false, content: {}}}
+            state = {...state, activePost: { open: false, content: { body: []}}}
         default:
             break;
     }

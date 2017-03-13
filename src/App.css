@@ -23,11 +23,6 @@
   to { transform: rotate(360deg); }
 }
 
-.card {
-    width: 525px !important;
-    margin: 26px !important;
-}
-
-.feed {
-    margin: 20px;
+.header {
+    margin-top: 10px;
 }

@@ -24,17 +24,27 @@ class FeedPost extends Component {
     }
 
     render(){
-        console.log(this.props);
-
         return(
             <Modal open={this.props.open} dimmer='blurring'>
                 <Modal.Header>{this.props.content.title}
-                    <Label className={'feedPostHeaderLabel ' + this.props.content.topic}>Written by {this.props.content.author}</Label>
+                    <Label circular className='feedPostHeaderLabel'><Icon name='close' /></Label>
+                    
+                    <Label size='medium' className={'feedPostHeaderLabel ' + this.props.content.topic}>Written by {this.props.content.author}</Label>
                 </Modal.Header>
                 <Modal.Content image>
-                    <Image wrapped size='medium' src={exampleImage} />
+                    <Image wrapped size='massive' className='feedPostImage' src={exampleImage} />
+                </Modal.Content>
+                <Modal.Content className='feedPostText'>
                     <Modal.Description>
-                        {this.props.content.body}
+                        {this.props.content.body.map((paragraph) => {
+                            console.log(paragraph.p)
+                            return(
+                                <div>
+                                    <p>{paragraph.p}</p>
+                                    <br />
+                                </div>
+                            )
+                        }, this)}
                     </Modal.Description>
                 </Modal.Content>
                 <Modal.Actions>

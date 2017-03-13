@@ -20,3 +20,7 @@
 .feedPostHeaderLabel {
     float: right !important;
 }
+
+.feedPostText {
+    font-size: 22px !important;
+}
